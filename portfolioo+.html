@@ -1,0 +1,440 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family:'Timesnewroman';
+		}
+		body{
+            background: linear-gradient(to bottom right, rgba(0,0,0, 0.9), rgba(36,11,54, 0.8), rgba(195,20,50,0.9)), url("https://i.imgur.com/3vacZxN.jpg") center no-repeat;
+			background-size: cover;
+			background-repeat:no-repeat;
+			background-attachment:fixed;
+		}
+		p{
+			font-size:20px;
+			font-family: 'Times New Roman', Times, serif;
+			line:2px;
+		}
+		.container{
+			background-image: url(https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_520/MTkzOTUzODU0MDkyNjE3MjIx/particlesjs-examples.webp);
+			background-size: cover;
+			background-repeat:no-repeat;
+			background-attachment:fixed;
+            width: 100%;
+            min-height: 100%;
+            background-color: white;
+        }
+		nav{
+			display: flex;
+			width: 100%;
+			justify-content: space-around;
+			height: 80px;
+			line-height: 80px;
+		}
+		.logo{
+			font-size: 40px;
+			color:black;
+		}
+		.navbar{
+			display: flex;
+		}
+		.navbar li{
+			list-style: none;
+			margin: 0px 15px;
+		}
+		.navbar li a{
+			font-size: 25px;
+			color: black;
+			padding: 30px;
+			text-decoration: none;
+			text-transform: capitalize;
+		}
+		.navbar li a:hover{
+			color:pink;
+		}
+		.links a{
+			font-size:30px;
+			margin:20px;
+			color:black;
+		}
+		.wrapper{
+			display: flex;
+			width: 100%;
+			margin-top:0px;
+			height: calc(100vh - 80px);
+			align-items: center;
+			padding: 10%;
+			margin-top:35px;
+		}
+		.cols{
+			width: 50%;
+		}
+		.topline{
+			font-size: 25px;
+			letter-spacing:5px;
+		}
+		h1{
+			font-size: 100px;
+			font-weight: 900;
+			color: black;
+		}
+		.multiText{
+			color: purple;
+			text-transform: capitalize;
+		}
+		button{
+			cursor: pointer;
+			font-size: 25px;
+			font-weight: 400;
+			color: white;
+			background-color: black;
+			padding: 8px 14px;
+			margin: 40px 5px;
+			letter-spacing: 2px;
+			text-transform: capitalize;
+		}
+		button:hover{
+			background-color: purple;
+		}
+		.about{   
+			position: absolute;
+			width: 90%;
+			margin-top:30px;
+			text-align: center;
+			padding-top: 100px;
+			justify-content: center;
+			display: flex;
+		}
+		.about-content{
+			padding-top: 100px;
+			margin-left:80px;
+			-webkit-text-fill-color: antiquewhite;
+		}
+		.skill{
+			margin-top:700px;
+			text-align: center;
+			padding-left: 70px;
+			width: 95%;
+			padding-top: 60px;
+		}
+		.blog-content h1 {
+			padding-left: 450px;;
+			padding-bottom:30px;
+			font-size:80px;
+		}
+		.blog-content p{
+			padding: 100px;
+			justify-content: center;
+		}
+		h3{
+			text-align: center;
+			font-weight: 600;
+			margin: 10px;
+		}
+		.row{
+			margin-top: 5%;
+			display: flex;
+			justify-content: space-between;
+		}
+		.course-col{
+			flex-basis: 31%;
+			background: lightblue;
+			border-radius: 10px;
+			margin-bottom:10%;
+			padding: 20px 12px;
+			padding-bottom:150px;
+			box-sizing: border-box;
+			transition: background 1s transform 1s;
+		}
+		.course-col:hover{
+			background:purple;
+			transform:translateY(-10px);
+			cursor: pointer;
+		}
+		.imgbox{
+			float:right;
+			height:300px;
+		}
+		.imgbox img{
+			overline:hidden;
+			position: relative;
+			height: 120%;
+			width: calc(100% - 10px);
+			top: -40px;
+			right: 30px;
+		}
+		.btns a{
+			text-decoration:none;
+			color:white;
+		}
+		.about-img{
+			padding-top:20px;
+			margin-left:50px;
+		}
+		.about-img img{
+			height:80%;
+		}
+		.tech{
+			display:inline; 	
+			margin-left:370px;
+		}
+		.tech iconify-icon{
+			transition: background 2s transform 1s;
+		}
+		.tech iconify-icon:hover{
+			transform:translateY(-10px);
+		}
+		#loader{
+			position: fixed;
+			width: 100%;
+			height: 100vh;
+			background: #000 url('preloader.webp') no-repeat center;
+			background-size:40%;
+			z-index: 999;
+		}
+		//contact
+		.container1{
+			padding-top: 100px;
+			margin-left:80px;
+		}
+		.content{
+			margin-top:30px;
+			margin-bottom:10px;
+			text-align: center;
+			padding-left:70px;
+			width:95%;
+			padding-top: 50px;
+		}
+		//form
+		.container1{
+			width:100%;
+			height:100vh;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+		}
+		form{
+			background:url(https://images.saymedia-content.com/.image/t_share/MTkzOTUzODU0MDkyODc5MzY1/particlesjs-examples.gif);
+			display:flex;
+			flex-direction:column;
+			padding:2vw 4vw;
+			width:80%;
+			height:90%;
+			max-width:500px;
+			border-radius:10px;
+			margin-left:420px;
+			margin-bottom:100px;
+		}
+		form input,form textarea{
+			border:0;
+			margin:10px 0;
+			padding:20px;
+			outline:none;
+			font-size:16px;
+		}
+		form .sub{
+			background-color:black;
+			color:white;
+		}
+		#cot{
+			color:green;
+			margin-top:0px;
+			display:block;
+			text-align:center;
+		}
+		footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+			height:10%;
+        }
+	</style>
+</head>
+<body>
+	<div id="loader"></div>
+    <section class="container" id="myhome">
+        <nav>
+            <div class="logo">Vinay Portfolio<b></b></div>
+            <ul class="navbar">
+                <li>
+                    <a href="#myhome">Home</a>
+                    <a href="#myabout">About</a>
+                    <a href="#myskill">Skill</a>
+                    <a href="#feed">Blog</a>
+                    <a href="#cot">Contact</a>
+                </li>
+            </ul>
+            <div class="links">
+				<a href="https://www.linkedin.com/in/vinay-manohar-bhyri-8a4479282/"><iconify-icon icon="mdi:linkedin"></iconify-icon></a>
+                <a href="https://www.instagram.com/vinaymanohar.bhyri/?next=%2F"><iconify-icon icon="simple-icons:instagram"></iconify-icon></a>
+                <a href="https://github.com/vinaymanoharbhyri"><iconify-icon icon="mdi:github"></iconify-icon> </a>
+            </div>
+        </nav>
+        <div class="wrapper">
+            <div class="cols cols0">
+                <span class="topline">Hello,<br>I'm VinayManohar</span>
+                <h1>And I'm a<br><span class="multiText"></span></h1>
+                <p>Self-motivated and hardworking fresher seeking for an opportunity to work in a challenging environment to prove my skills and utilize my knowledge & intelligence in the growth of the organization.</p>
+				<div class="btns">
+                    <button><a href="vinaymanohar's resume.pdf">Download cv</a><iconify-icon icon="material-symbols:download"></iconify-icon></button>
+                    <Button>Hire Me</Button>
+				</div>
+            </div>
+			<div class="cols1">
+                <div class="imgbox">
+                 <img src="imglogo.jpg" style="margin-left: 100px;">
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <section class="about" id="myabout">
+        <div class="about-img">
+            <img src="imglogo.jpg" width="450px" height="450px">
+        </div>
+        <div class="about-content">
+            <h1 >About <span class="multiText">Me</span></h1>
+            <h3>Frontend Developer</h3>
+            <p>VinayManohar an Web developer. I 
+				love to solve programming problems 
+				in most efficient ways.I do my work mainly in C-Language, 
+				C++ and JAVA. C++ and Data Structure
+				and Algorithm are my stronger section.
+				Besides these I know Web Development,
+				LINUX and database as well.This website is basically one of my 
+				Web Development project which is 
+				built using HTML only.
+				Here one can also find ideas for 
+				projects in different languages.
+
+				Thanks again for reading this, 
+				because of people like you, it 
+				exists and prospers!</p>
+            <div class="btns rdm"><button > Read More</button></div>
+        </div>
+    </section>
+
+    <section class="skill" id="myskill">
+            <h1 class="title">My <span class="multiText">Skill</span> </h1>
+            <div class="row">
+                <div class="course-col">
+                    <h3>WEB DEVELOPER  <span class="multiText"><iconify-icon icon="logos:html-5"></iconify-icon></span></h3>
+                    <p>I work as a web developer. I am a software engineer who loves to create websites as well as apps for people. I think that people should look at the bigger picture when they are building something. I love to work in groups where everyone can voice their opinions and ideas.</p>
+                </div>
+                <div class="course-col">
+                    <h3>Data Analyst<span class="multiText"><iconify-icon icon="logos:html-5"></iconify-icon></span></h3></h3>
+                    <p> I have a lot of experience in data analysis and I'm very familiar with the software you use. I've worked on projects similar to this one, and I know how to work with people. I'm also very good at finding patterns in data and communicating my results.</p>
+                </div>
+                <div class="course-col">
+                    <h3>DSA <span class="multiText"><iconify-icon icon="logos:html-5"></iconify-icon></span></h3></i></h3>
+                    <p>I do my work mainly in C-Language, 
+						C++ and JAVA. C++ and Data Structure
+						and Algorithm are my stronger section.
+						Besides these I know Web Development,
+						LINUX and database as well. </p>
+                </div>
+            </div>
+    </section>
+
+    <section class="Blog" id="feed">
+        <div class="blog-content">
+            <h1>Coding<span class="multiText">Skills</span></h1>
+			<div class="tech">
+				<a href="https://www.w3schools.com/cpp/"><iconify-icon class="icons" icon="file-icons:c" style="color: blue;" width="100" height="100"></iconify-icon></a>
+			</div>
+			<div class="tech">
+				<a href="https://www.w3schools.com/python/"><iconify-icon icon="logos:python" style="color: blue;" width="100" height="100"></iconify-icon></a>
+			</div>
+			<br><br><br><br><br><br>
+			<div class="tech">
+				<a href="https://www.w3schools.com/html/"><iconify-icon icon="logos:html-5" width="100" height="100"></iconify-icon></a>
+			</div>
+			<div class="tech">
+				<a href="https://www.w3schools.com/css/"><iconify-icon icon="logos:css-3" width="100" height="100"></iconify-icon></a>
+			</div> 
+			<br><br><br><br><br><br>
+			<div class="tech">
+				<a href="https://www.w3schools.com/javascript/"><iconify-icon icon="logos:javascript" width="100" height="100"></iconify-icon></a>
+			</div>
+			<div class="tech">
+				<a href="https://www.w3schools.com/sql/"><iconify-icon icon="vscode-icons:file-type-sql" width="100" height="100"></iconify-icon></a>
+			</div>
+			<br><br><br><br>
+        </div>
+    </section>
+	<section>
+		<div class="Certificates" id="">
+			<h1>My<span class="multiText">Certificates</span></h1>
+			<div>
+				<img src="Oracle.png" width="450px" height="370px" style="margin: 40px;">
+				<div>
+					<img src="GFG.png" width="450px" height="370px" style="margin: 40px;">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="contact" id="cot">
+        <div class="content">
+            <h1 >Contact<span class="multiText">Me</span></h1>
+        </div>
+		<div class="container1">
+			<form action="https://api.web3forms.com/submit" method="POST">
+				<h3>Get In Touch</h3>
+				<input type="hidden" name="access_key" value="972efab6-2a0b-4b3a-ae94-2df03ae9a64c">
+				<input type="text" name="Name" id="name" placeholder="Enter Name" required>
+				<input type="email" name="Email" id="email" placeholder="Enter Email" required>
+				<input type="text" name="Phno" id="phoneno" placeholder="Enter PhoneNo" required>
+				<textarea id="message" name="Message" rows="4" placeholder="How can we help?"></textarea>
+				<button class="sub" type="submit">Send</button>
+				<span id="msg">Enter the details</span>
+			</form>
+		</div>
+    </section>
+	<section>
+		<div id="footer">
+			<footer>
+				<p>&copy; 2024 My Website. All rights reserved.</p>
+			</footer>
+		</div>
+	</section>
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script>
+        var typingEffect =new Typed(".multiText",{
+            strings : ["Coder","Developer","DataAnalyst"],
+            loop:true,
+            typeSpeed :100,
+            backSpeed :80,
+            backDelay :1500
+        })
+    </script>
+	<script>
+		var loader;
+		function loadNow(opacity) {
+			if (opacity <= 0) {
+				displayContent();
+			} else {
+				loader.style.opacity = opacity;
+				window.setTimeout(function() {
+					loadNow(opacity - 0.05);
+				}, 50);
+			}
+		}
+		function displayContent() {
+			loader.style.display = 'none';
+			document.getElementById('container').style.display = 'block';
+		}
+		document.addEventListener("DOMContentLoaded", function() {
+			loader = document.getElementById('loader');
+			loadNow(2);
+		});
+    </script>
+</body>
+</html>
